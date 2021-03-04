@@ -13,6 +13,9 @@
             #problem {
                 font-size: 72px;
             }
+            
+            #result {
+                width = 50%;
 
             #winner {
                 font-size: 72px;
@@ -51,7 +54,7 @@
                     return (
                         <div>
                             <div id="problem">{this.state.num1} x {this.state.num2}</div>
-                            <input onKeyPress={this.inputKeyPress} onChange={this.updateResponse} value={this.state.response} />
+                            <input id="result" onKeyPress={this.inputKeyPress} onChange={this.updateResponse} value={this.state.response} />
                             <div>Score: {this.state.score}</div>
                         </div>
                     );
