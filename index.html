@@ -24,6 +24,10 @@
                 width: 150px;
             }
 
+            .opp {
+                font-size: 50px;
+            }
+
             #winner {
                 font-size: 72px;
                 color: green;
@@ -64,6 +68,8 @@
                             <input id="result" onKeyPress={this.inputKeyPress} onChange={this.updateResponse} value={this.state.response} />
                             <div><meter id="progress" value={this.state.score} min="0" max="10" >{this.state.score} out of 10</meter></div>
                             <div>Score: {this.state.score}</div>
+                            <div class="opp">{this.state.response} / {this.state.num1} = {this.state.num2}</div>
+                            <div class="opp">{this.state.response} / {this.state.num2} = {this.state.num1}</div>
                         </div>
                     );
                 }
