@@ -36,7 +36,7 @@
         </style>
         <title>Multiplication</title>
     </head>
-    <body>
+    <body><!--
         <div id="app"></div>
         <script type="text/babel">
         
@@ -105,5 +105,10 @@
             ReactDOM.render(<App />, document.querySelector('#app'));
 
         </script>
+-->
+        <!-- Start of EducationLink form -->
+<form id="education-link-form-TTGS3S9vsb2wKY7Mg" action="https://app.geteducation.link/api/forms/post?form=TTGS3S9vsb2wKY7Mg"></form>
+<script>jQuery(document).ready(function(){jQuery.getScript("https://app.geteducation.link/resources/forms/form-render.js",function(){jQuery.get("https://api.geteducation.link/forms/get?form=TTGS3S9vsb2wKY7Mg",function(e){var o=jQuery("#education-link-form-TTGS3S9vsb2wKY7Mg"),t=JSON.stringify(e);o.formRender({formData:t}),o.submit(function(e){e.preventDefault(),o.find('button[type="submit"]').prop("disabled",!0);var t=new FormData(jQuery(this)[0]);try{var r=ga.getAll()[0].get("clientId");t.append("googleAnalyticsClientId",r)}catch(e){console.warn("[EDULINK FORMS] No Google Analytics detected or error appending id to FormData.")}jQuery.ajax({type:"POST",url:e.target.action,data:t,cache:!1,contentType:!1,processData:!1,success:function(){o.parent().append('<div class="alert alert-success" style="margin-top: 60px;" role="alert"><p class="pull-left">We\'ve received your request and will get back soon.</p><div class="clearfix"></div></div>')},error:function(e){o.parent().append('<div class="alert alert-danger" style="margin-top: 60px;" role="alert"><p class="pull-left">'+(e&&e.responseJSON.error)||'Something went wrong, and it was not possible to submit your form.</p><div class="clearfix"></div></div>'),setTimeout(function(){jQuery(".js-error-form").remove(),o.find('button[type="submit"]').prop("disabled",!1)},5e3)}})})})})});</script>
+<!-- End of EducationLink form -->
     </body>
 </html>
