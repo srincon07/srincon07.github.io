@@ -1,109 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-        <style>
-            
-            #app {
-                text-align: center;
-                font-family: sans-serif;
-            }
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My projects and practices in programming." />
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="./css/style.css">
+    <title>SarbCode | My personal site</title>
+</head>
+<body>
+    <header>
+        <nav></nav>
+    </header>
+    <main>
+        <section>
+            <article>
 
-            #problem {
-                font-size: 72px;
-            }
+            </article>
+        </section>
+        <ul>
+            <li></li>
+        </ul>
+        <ol>
+            <li></li>
+        </ol>
+    </main>
+    <footer>
 
-            #result {
-                height: 30px;
-                width: 100px;
-            }
-
-            #progress {
-                height: 15px;
-                width: 150px;
-            }
-
-            .opp {
-                font-size: 50px;
-            }
-
-            #winner {
-                font-size: 72px;
-                color: green;
-            }
-        </style>
-        <title>Multiplication</title>
-    </head>
-    <body>
-        <div id="app"></div>
-        <script type="text/babel">
-        
-            class App extends React.Component {
-
-                constructor(props) {
-                    super(props);
-                    this.state = {
-                        num1: Math.ceil(Math.random() * 10),
-                        num2: Math.ceil(Math.random() * 10),
-                        response: "",
-                        score: 0
-                    };
-                }
-
-
-                render() {
-
-                    if(this.state.score === 10) {
-                        return (
-                            <div id="winner">
-                                You won!    
-                            </div>
-                        );
-                    }
-
-                    return (
-                        <div>
-                            <div id="problem">{this.state.num1} x {this.state.num2}</div>
-                            <input id="result" onKeyPress={this.inputKeyPress} onChange={this.updateResponse} value={this.state.response} />
-                            <div><meter id="progress" value={this.state.score} min="0" max="10" >{this.state.score} out of 10</meter></div>
-                            <div>Score: {this.state.score}</div>
-                            <div class="opp">{this.state.response} / {this.state.num1} = {this.state.num2}</div>
-                            <div class="opp">{this.state.response} / {this.state.num2} = {this.state.num1}</div>
-                        </div>
-                    );
-                }
-
-                inputKeyPress = (event) => {
-                    if (event.key === 'Enter') {
-                        const answer = parseInt(this.state.response);
-                        if (answer === this.state.num1 * this.state.num2) {
-                            this.setState(state => ({
-                                score: state.score + 1,
-                                num1: Math.ceil(Math.random() * 10),
-                                num2: Math.ceil(Math.random() * 10),
-                                response: ""
-                            }));
-                        }else{
-                            this.setState(state => ({
-                                score: state.score - 1,
-                                response: ""
-                            }))
-                        }
-                    }
-                }
-
-                updateResponse = (event) => {
-                    this.setState({
-                        response: event.target.value
-                    })
-                }
-
-            }
-
-            ReactDOM.render(<App />, document.querySelector('#app'));
-
-        </script>
-    </body>
+    </footer>
+</body>
 </html>
