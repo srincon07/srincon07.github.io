@@ -192,15 +192,15 @@
 
                 <div class="col-lg-6">
                     <!-- form fields -->
-                    <form>
-                        <input type="text" class="form-control form-control-lg" placeholder="Name">
-                        <input type="email" class="form-control mt-3" placeholder="Email">
-                        <input type="text" class="form-control mt-3" placeholder="Subject">
+                    <form action="https://formspree.io/f/mzbovaqo" method="POST">
+                        <input type="text" name='Name' class="form-control form-control-lg" placeholder="Name" required>
+                        <input type="email" name="Email" class="form-control mt-3" placeholder="Email" required>
+                        <input type="text" name="Subject" class="form-control mt-3" placeholder="Subject" required>
                         <div class="mb-3 mt-3">
-                            <textarea class="form-control" rows="5" id="comment" name="text" placeholder="Project Details"></textarea>
+                            <textarea class="form-control" name="Comment" rows="5" id="comment" name="text" placeholder="Project Details"></textarea>
                         </div>
+                        <button type="submit" class="btn btn-success mt-3">Contact Me</button>
                     </form>
-                    <button type="button" class="btn btn-success mt-3">Contact Me</button>
                     
                 </div>
 
