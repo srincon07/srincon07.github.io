@@ -35,6 +35,10 @@
 #contact {
     padding-bottom: 4rem;
 }
+/* abuot section*/
+#about p {
+    text-align: justify;
+}
 /* about section image css */
 .imageAboutPage {
     width: 80%;
