@@ -192,12 +192,12 @@
 
                 <div class="col-lg-6">
                     <!-- form fields -->
-                    <form action="https://formspree.io/f/mzbovaqo" method="POST">
-                        <input type="text" name='Name' class="form-control form-control-lg" placeholder="Name" required>
-                        <input type="email" name="Email" class="form-control mt-3" placeholder="Email" required>
-                        <input type="text" name="Subject" class="form-control mt-3" placeholder="Subject" required>
+                    <form id="contact-form" method="POST">
+                        <input type="text" id='name' class="form-control form-control-lg" placeholder="Name" required>
+                        <input type="email" id="email" class="form-control mt-3" placeholder="Email" required>
+                        <input type="text" id="subject" class="form-control mt-3" placeholder="Subject" required>
                         <div class="mb-3 mt-3">
-                            <textarea class="form-control" name="Comment" rows="5" id="comment" name="text" placeholder="Project Details"></textarea>
+                            <textarea class="form-control" id="comment" rows="5" id="comment" name="text" placeholder="Project Details"></textarea>
                         </div>
                         <button type="submit" class="btn btn-success mt-3">Contact Me</button>
                     </form>
@@ -221,6 +221,40 @@
 
     <!-- load javascript after loading all html content -->
     <script src="script/script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        // Listen for a submit
+        document.querySelector('#contact-form').addEventListener('submit', submitForm);
+
+        function submitForm(e) {
+            e.preventDefault();
+
+            //Get input values
+            let name = document.querySelector('#name').value;
+            let email = document.querySelector('#email').value;
+            let subject = document.querySelector('#subject').value;
+            let comment = document.querySelector('#comment').value;
+
+            document.querySelector('#contact-form').reset();
+
+            sendEmail(name, email, subject, comment);
+        }
+        // Send email info
+        function sendEmail(name, email, subject, comment){
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "sarb07@gmail.com",
+                Password : "anxnuohthsbnxtet",
+                To : 'sarb07.au@gmail.com',
+                From : `${email}`,
+                Subject : `${subject}`,
+                Body : 
+                    `Name: ${name} <br/> Message: ${comment}`,
+            }).then(
+            (message) => alert('Message sent successfully.')
+            );
+        }    
+    </script>
 
 </body>
 
