@@ -47,7 +47,7 @@
 
 /* services section css */
 .servicesText.card {
-    height: 280px;
+    height: auto;
     cursor: pointer;
   }
 .servicesIcon {
