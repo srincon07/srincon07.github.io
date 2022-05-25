@@ -1,0 +1,28 @@
+/* NAV STYLES */
+.nav {
+    justify-content: flex-end;
+}
+
+/* WELCOME SECTION STYLES */
+.welcome-section {
+    flex-direction: column;
+}
+
+/* PROJECTS SECTION STYLES */
+.projects-section-header {
+    max-width: 640px;
+}
+
+.projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    max-width: 1280px;
+}
+
+/* CONTACT SECTION STYLES */
+.contact-section {
+    height: 80vh;
+}
+
+.contact-links {
+    max-width: 980px;
+}
