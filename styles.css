@@ -119,6 +119,7 @@ h2 {
     border-radius: 2px;
     box-shadow: 1px 1px 2px rgb(0, 0, 0 / 50%);
     transition: transform 0.3s ease-out;
+    padding-bottom: 1rem;
 }
 
 .project-tile:hover {
@@ -127,13 +128,12 @@ h2 {
 
 .project-title {
     font-size: 1.3rem;
-    padding: 0.75rem 0.3rem;
 }
 
 .project-image {
     height: calc(100% - 3.8rem);
     width: 100%;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 /* CONTACT SECTION STYLES */
